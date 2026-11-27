@@ -26,7 +26,7 @@ where id between 20 and 100 and score > 3
 -- 6. Показать студентов, отсортированных по score по убыванию
 select first_name, last_name, score
 from students
-order by score asc
+order by score desc
 
 -- 7. Показать студентов, отсортированных по фамилии и затем по имени
 select first_name, last_name
@@ -52,7 +52,7 @@ limit 5
 -- 11. Найти студентов, у которых id не входит в 1,2,3
 select first_name, last_name, id
 from students
-where id not in (4,5)
+where id not in (1,2,3)
 
 -- 12. Найти студентов, родившихся зимой (декабрь, январь, февраль)
 select first_name, last_name, month(birth_date) as winter
